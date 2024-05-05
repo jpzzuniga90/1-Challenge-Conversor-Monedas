@@ -24,8 +24,18 @@ public class ConversorMonedas {
             throw new RuntimeException("No se pudo realizar la conversion");
         }
 
+    }
 
-
+    public void ConversorAPI(String monedaBase, String monedaDestino, double cantidad){
+        try {
+            Moneda moneda = convertirMonedas(monedaBase, monedaDestino, cantidad);
+            System.out.println("\n");
+            System.out.println(moneda);
+            System.out.println("\n");
+        } catch (NumberFormatException e) {
+            System.out.println("Conversion fallida " + e.getMessage());
+            System.out.println("Finalizando el programa");
+        }
     }
 
 }

@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Principal {
 
     public static void main(String[] args) throws RuntimeException, IOException {
+        ConversorMonedas conversor = new ConversorMonedas();
         Scanner lectura = new Scanner(System.in);
         var opcion = 0;
         var cantidad = 0;
@@ -26,90 +27,36 @@ public class Principal {
                 case 1:
                     System.out.println("Digite la cantidad a convertir");
                     cantidad = Integer.parseInt(lectura.nextLine());
-                    try {
-                        ConversorMonedas conversor = new ConversorMonedas();
-                        Moneda moneda = conversor.convertirMonedas("USD", "CRC", cantidad);
-                        System.out.println("\n");
-                        System.out.println(moneda);
-                        System.out.println("\n");
-                    } catch (NumberFormatException e) {
-                        System.out.println("Conversion fallida " + e.getMessage());
-                        System.out.println("Finalizando el programa");
-                    }
+                    conversor.ConversorAPI("USD", "CRC", cantidad);
                     break;
                 case 2:
                     System.out.println("Digite la cantidad a convertir");
                     cantidad = Integer.parseInt(lectura.nextLine());
-                    try {
-                        ConversorMonedas conversor = new ConversorMonedas();
-                        Moneda moneda = conversor.convertirMonedas("USD", "EUR", cantidad);
-                        System.out.println("\n");
-                        System.out.println(moneda);
-                        System.out.println("\n");
-                    } catch (NumberFormatException e) {
-                        System.out.println("Conversion fallida " + e.getMessage());
-                        System.out.println("Finalizando el programa");
-                    }
+                    conversor.ConversorAPI("USD", "EUR", cantidad);
                     break;
 
                 case 3:
                     System.out.println("Digite la cantidad a convertir");
                     cantidad = Integer.parseInt(lectura.nextLine());
-                    try {
-                        ConversorMonedas conversor = new ConversorMonedas();
-                        Moneda moneda = conversor.convertirMonedas("CRC", "USD", cantidad);
-                        System.out.println("\n");
-                        System.out.println(moneda);
-                        System.out.println("\n");
-                    } catch (NumberFormatException e) {
-                        System.out.println("Conversion fallida " + e.getMessage());
-                        System.out.println("Finalizando el programa");
-                    }
+                    conversor.ConversorAPI("CRC", "USD", cantidad);
                     break;
 
                 case 4:
                     System.out.println("Digite la cantidad a convertir");
                     cantidad = Integer.parseInt(lectura.nextLine());
-                    try {
-                        ConversorMonedas conversor = new ConversorMonedas();
-                        Moneda moneda = conversor.convertirMonedas("CRC", "EUR", cantidad);
-                        System.out.println("\n");
-                        System.out.println(moneda);
-                        System.out.println("\n");
-                    } catch (NumberFormatException e) {
-                        System.out.println("Conversion fallida " + e.getMessage());
-                        System.out.println("Finalizando el programa");
-                    }
+                    conversor.ConversorAPI("CRC", "EUR", cantidad);
                     break;
 
                 case 5:
                     System.out.println("Digite la cantidad a convertir");
                     cantidad = Integer.parseInt(lectura.nextLine());
-                    try {
-                        ConversorMonedas conversor = new ConversorMonedas();
-                        Moneda moneda = conversor.convertirMonedas("USD", "JPY", cantidad);
-                        System.out.println("\n");
-                        System.out.println(moneda);
-                        System.out.println("\n");
-                    } catch (NumberFormatException e) {
-                        System.out.println("Conversion fallida " + e.getMessage());
-                        System.out.println("Finalizando el programa");
-                    }
+                    conversor.ConversorAPI("USD", "JPY", cantidad);
                     break;
 
                 case 6:
                     System.out.println("Digite la cantidad a convertir");
                     cantidad = Integer.parseInt(lectura.nextLine());
-                    try {
-                        ConversorMonedas conversor = new ConversorMonedas();
-                        Moneda moneda = conversor.convertirMonedas("USD", "MXN", cantidad);
-                        System.out.println("\n");
-                        System.out.println(moneda);
-                        System.out.println("\n");
-                    } catch (NumberFormatException e) {
-                        System.out.println("Conversion fallida " + e.getMessage());
-                        System.out.println("Finalizando el programa");
-                    }
+                    conversor.ConversorAPI("USD", "MXN", cantidad);
                     break;
 
                 case 7:
